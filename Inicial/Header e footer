@@ -14,3 +14,103 @@ function Header() {
     </div>
   )
 }
+
+
+.ciano {
+  color: #00D2FF;
+}
+
+.ciano2 {
+  color: #00D2FF;
+  font-size: 70px;
+}
+
+.branco {
+  color: #8B949E;
+}
+
+.primario {
+  color: #F0F6FC;
+}
+
+.secundario {
+  color: #8B949E;
+}
+
+.barras {
+  color: #7928CA;
+}
+
+.dev {
+  color: #00D2FF;
+  margin: 0;
+}
+
+.primario2{
+  margin-left: 255px;
+    color: #F0F6FC;
+
+}
+
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px 40px; 
+  border-radius: 16px;
+  border: 1px solid #30363D;
+  background-color: #161B22;
+}
+
+
+.dev {
+  color: #00D2FF;
+  margin: 0;
+  font-size: 30px; 
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 32px; 
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 23px; 
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #7928CA;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Footer 
+
+
+
+
+
+
+
