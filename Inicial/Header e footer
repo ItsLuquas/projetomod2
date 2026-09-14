@@ -112,5 +112,8 @@ Footer
 
 
 
-
+<footer className="footer-container">
+          <span>DevDock © 2026 — Projeto Integrador React</span>
+          <span className="footer-destaque">Desenvolvido para Devs & Gamers </span>
+        </footer>
 
