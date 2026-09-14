@@ -2,9 +2,8 @@
 function Header() {
   return (
     <div className="topo">
-      <h1 className="dev">
-        DevDock<span className="barras">///</span>
-      </h1>
+      <img src={logo} alt="" width="400px" height="120px" />
+
       <nav>
         <NavLink
           to="/"
@@ -35,7 +34,7 @@ function Header() {
         </NavLink>
       </nav>
     </div>
-  )
+  );
 }
 
 
