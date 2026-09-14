@@ -1,1 +1,16 @@
 
+function Header() {
+  return (
+    <div className="topo">
+      <h1 className="dev">
+        DevDock<span className="barras">///</span>
+      </h1>
+      <nav>
+        <a href="" className="ciano">Home</a>
+        <a href="" className="branco">Equipamentos</a>
+        <a href="" className="branco">Guias & ergonomia</a>
+        <a href="" className="branco">Monte seu setup</a>
+      </nav>
+    </div>
+  )
+}
