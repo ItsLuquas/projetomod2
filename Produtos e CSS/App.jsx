@@ -5,7 +5,6 @@ import foto2 from './assets/LG34.jpg';
 import foto3 from './assets/Miller.webp';
 import foto4 from './assets/MX3S.jpg';
 import foto5 from './assets/Dell27.jpg';
-import foto6 from './assets/X3D.jpg';
 
 function DetalhesProduto({ produto, aoVoltar }) {
   return (
@@ -55,10 +54,10 @@ function Produtos() {
     {
       id: 1,
       categoria: 'Periféricos',
-      badge: 'PÉRIFERICOS',
-      nome: 'Teclado Keychron 2',
+      badge: 'PERIFÉRICOS',
+      nome: 'Teclado Keychron K2',
       descricao: 'Wireless 75%, Switches Brown, RGB e layout compacto.',
-      preco: 'R$650,00',
+      preco: 'R$799,00',
       foto: foto1,
       specs: ['Layout 75%', 'Switches Gateron Brown', 'Conexão Bluetooth e Cabo', 'Bateria de 4000mAh'],
       ergonomia: 'Teclas com resposta tátil leve e altura reduzida, prevenindo a fadiga do pulso em digitações prolongadas.'
@@ -66,10 +65,10 @@ function Produtos() {
     {
       id: 2,
       categoria: 'Monitores',
-      badge: 'Monitores',
+      badge: 'MONITORES',
       nome: "Monitor LG Ultrawide 34'",
-      descricao: 'Resolução WQHD 144Hz ideal para código',
-      preco: 'R$2,499,00',
+      descricao: 'Resolução WQHD 144Hz ideal para código.',
+      preco: 'R$2.699,00',
       foto: foto2,
       specs: ['Resolução WQHD (3440x1440)', 'Painel IPS 144Hz', 'Suporte com Ajuste de Altura'],
       ergonomia: 'Área de tela estendida que elimina a necessidade de um segundo monitor, reduzindo o movimento excessivo do pescoço.'
@@ -77,10 +76,10 @@ function Produtos() {
     {
       id: 3,
       categoria: 'Ergonomia',
-      badge: 'Ergonomia',
+      badge: 'ERGONOMIA',
       nome: 'Cadeira Herman Miller',
       descricao: 'Suporte lombar avançado e estrutura ajustável de alta durabilidade.',
-      preco: 'R$4,200,00',
+      preco: 'R$12.490,00',
       foto: foto3,
       specs: ['Ajuste Lombar PostureFit', 'Malha Mesh Respirável', 'Braços Reguláveis 3D'],
       ergonomia: 'Distribuição uniforme do peso corporal e alinhamento natural da coluna vertebral durante todo o expediente.'
@@ -88,10 +87,10 @@ function Produtos() {
     {
       id: 4,
       categoria: 'Periféricos',
-      badge: 'PÉRIFERICOS',
+      badge: 'PERIFÉRICOS',
       nome: 'Mouse MX Master 3S',
-      descricao: 'Ergonômico, rolagem MagSpeed ultra-rápido',
-      preco: 'R$550,00',
+      descricao: 'Ergonômico, rolagem MagSpeed ultra-rápida.',
+      preco: 'R$649,00',
       foto: foto4,
       specs: ['Sensor 8000 DPI', 'Clique Silencioso', 'Scroller MagSpeed em Aço'],
       ergonomia: 'Design esculpido para encaixe perfeito da mão, mantendo o pulso em um ângulo neutro e natural.'
@@ -99,24 +98,46 @@ function Produtos() {
     {
       id: 5,
       categoria: 'Monitores',
-      badge: 'Monitores',
-      nome: "Monitor Dell 27' 4k",
-      descricao: 'Painel IPS 4K, hub USB-C e rotação vertical',
-      preco: 'R$2,899,00',
+      badge: 'MONITORES',
+      nome: "Monitor Dell 27' 4K",
+      descricao: 'Painel IPS 4K, hub USB-C e rotação vertical.',
+      preco: 'R$2.999,00',
       foto: foto5,
       specs: ['Resolução 4K UHD', 'Conectividade USB-C 65W', 'Rotação de 90° (Modo Pivot)'],
       ergonomia: 'Rotação vertical perfeita para leitura de linhas extensas de código mantendo a postura ereta.'
     },
     {
       id: 6,
+      categoria: 'Ergonomia',
+      badge: 'ERGONOMIA',
+      nome: 'Suporte Articulado a Gás para Monitor',
+      descricao: 'Ajuste fluido de altura, inclinação e rotação 360° para alinhamento postural.',
+      preco: 'R$199,00',
+      foto: 'https://images.tcdn.com.br/img/img_prod/1362985/suporte_para_monitor_articulado_a_gas_de_17_a_32_polegadas_pm40aq_213_9_dbc9d8e49b29d4c8c73e845aa2bf431e.jpeg',
+      specs: ['Pistão a Gás com Amortecimento', 'Padrão VESA 75x75 e 100x100', 'Organizador de Cabos Integrado'],
+      ergonomia: 'Posiciona a tela na altura exata da linha dos olhos, eliminando a tensão na cervical e nos ombros.'
+    },
+    {
+      id: 7,
       categoria: 'Hardware',
-      badge: 'Hardware',
-      nome: 'Ryzen 7 7800X3D',
-      descricao: 'Alta performance para compilação e jogos.',
-      preco: 'R$2,699,00',
-      foto: foto6,
-      specs: ['8 Cores e 16 Threads', 'Tecnologia 3D V-Cache', 'Socket AM5'],
-      ergonomia: 'Processamento ultra-rápido que reduz o tempo de compilação de projetos, minimizando o estresse e a espera na rotina dev.'
+      badge: 'HARDWARE',
+      nome: 'Placa de Vídeo RTX 5090 32GB',
+      descricao: 'O topo absoluto em desempenho gráfico para IA avançada e renderização 3D extrema.',
+      preco: 'R$19.999,00',
+      foto: 'https://th.bing.com/th/id/OPHS.XHAGSQ6f1cbeeA474C474?w=474&h=474&qlt=100&o=5&dpr=2&pid=21.1',
+      specs: ['32GB GDDR7', 'Arquitetura Blackwell', 'Barramento 512-bit', 'Suporte a DLSS 4'],
+      ergonomia: 'Aceleração gráfica de última geração que elimina gargalos, otimizando o fluxo de trabalho e o tempo de resposta.'
+    },
+    {
+      id: 8,
+      categoria: 'Hardware',
+      badge: 'HARDWARE',
+      nome: 'Processador AMD Ryzen 9 9950X',
+      descricao: 'O processador mais potente do mercado para compilação pesada e multitarefa.',
+      preco: 'R$4.599,00',
+      foto: 'https://m.media-amazon.com/images/I/71hZfMZNZuL._AC_SY300_SX300_QL70_ML2_.jpg',
+      specs: ['16 Cores e 32 Threads', 'Clock Boost até 5.7GHz', '80MB de Cache Total', 'Socket AM5'],
+      ergonomia: 'Fluidez em multitarefa extrema que impede travamentos do sistema, reduzindo a fadiga durante a rotina dev.'
     }
   ];
 
