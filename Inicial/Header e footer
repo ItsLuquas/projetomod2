@@ -6,27 +6,62 @@ function Header() {
         DevDock<span className="barras">///</span>
       </h1>
       <nav>
-        <a href="" className="ciano">Home</a>
-        <a href="" className="branco">Equipamentos</a>
-        <a href="" className="branco">Guias & ergonomia</a>
-        <a href="" className="branco">Monte seu setup</a>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "nav-ativo" : "nav-link")}
+        >
+          Home
+        </NavLink>
+
+        <NavLink
+          to="/equipamentos"
+          className={({ isActive }) => (isActive ? "nav-ativo" : "nav-link")}
+        >
+          Equipamentos
+        </NavLink>
+
+        <NavLink
+          to="/guia"
+          className={({ isActive }) => (isActive ? "nav-ativo" : "nav-link")}
+        >
+          Guias & ergonomia
+        </NavLink>
+
+        <NavLink
+          to="/setup"
+          className={({ isActive }) => (isActive ? "nav-ativo" : "nav-link")}
+        >
+          Monte seu setup
+        </NavLink>
       </nav>
     </div>
   )
 }
 
 
-.ciano {
+nav a {
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-link {
+  color: #8B949E;
+}
+
+.nav-ativo {
   color: #00D2FF;
 }
+
+nav a:hover {
+  color: #7928CA;
+}
+
 
 .ciano2 {
   color: #00D2FF;
   font-size: 70px;
-}
-
-.branco {
-  color: #8B949E;
 }
 
 .primario {
