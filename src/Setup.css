@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f0f6fc;
+}
+
+/* ============================= */
+/* HEADER DO SETUP */
+/* ============================= */
+
+.headersetup {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  text-align: center;
+  width: 95%;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.headersetup h3 {
+  color: #7928ca;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.headersetup h1 {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.headersetup p {
+  color: #8b949e;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ============================= */
+/* ESTRUTURA PRINCIPAL (SIMULADOR) */
+/* ============================= */
+
+.tudosetup {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto 40px auto;
+  box-sizing: border-box;
+}
+
+/* Painel de Opções (Esquerda) */
+.direitasetup {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.direitasetup label {
+  color: #00d2ff;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.direitasetup select {
+  color: #f0f6fc;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.direitasetup select:focus {
+  border-color: #00d2ff;
+}
+
+.direitasetup select option {
+  background-color: #161b22;
+  color: #f0f6fc;
+}
+
+/* ============================= */
+/* RESUMO DA COMPRA (Direita) */
+/* ============================= */
+
+.esquerdasetup {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  border-radius: 16px;
+  color: #ffffff;
+  box-sizing: border-box;
+  height: fit-content;
+}
+
+.esquerdasetup h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #f0f6fc;
+  font-size: 20px;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 12px;
+}
+
+.esquerdasetup > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: 1px solid #21262d;
+}
+
+.esquerdasetup > div span {
+  color: #8b949e;
+  font-size: 14px;
+  padding-right: 12px;
+}
+
+.esquerdasetup > div strong {
+  color: #00d2ff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.esquerdasetup h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 2px solid #7928ca;
+  color: #00d2ff;
+  font-size: 18px;
+}
+
+
+

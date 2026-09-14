@@ -1,0 +1,228 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Garante que o contêiner raiz do React ocupe toda a tela em altura */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O flex: 1 faz este contêiner crescer e empurrar o footer sempre para baixo */
+.guia-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 20px 60px 20px; /* Aumentado o espaçamento inferior */
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* HEADER DA PÁGINA (BANNER ROXO) */
+/* ============================= */
+
+.guia-header-box {
+  background-color: #12161f;
+  border: 1.5px solid #7928ca;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 35px;
+  border-radius: 4px;
+}
+
+.guia-subtitle {
+  color: #00bcd4;
+  font-size: 13px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.guia-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+}
+
+.guia-description {
+  color: #a0a6b2;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* ============================= */
+/* GRID E CARDS */
+/* ============================= */
+
+.guia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.guia-card {
+  background-color: #12161f;
+  border: 1px solid #2a2f3a;
+  padding: 25px 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.guia-badge {
+  background-color: #1a202c;
+  color: #00bcd4;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 12px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+}
+
+.guia-card-title {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+}
+
+.guia-card-description {
+  color: #8b949e;
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  min-height: 45px;
+}
+
+.guia-btn-read {
+  background-color: #1a202c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.guia-btn-read:hover {
+  background-color: #2d3748;
+}
+
+/* Responsividade simples para telas menores */
+@media (max-width: 768px) {
+  .guia-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* MODAL FLUTUANTE (GUIA COMPLETO) */
+/* ============================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background-color: #12161f;
+  border: 1px solid #2a2f3a;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 10px 0 0 0;
+}
+
+.modal-body {
+  margin-top: 20px;
+}
+
+.modal-description {
+  color: #a0a6b2;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.modal-body h3 {
+  color: #00bcd4;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.modal-body ul {
+  padding-left: 18px;
+  margin: 0 0 25px 0;
+}
+
+.modal-body li {
+  color: #8b949e;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============================= */
+/* FOOTER CORRIGIDO */
+/* ============================= */
+
+.footer-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 80px auto 40px auto; /* Adicionado 80px de margem superior para empurrar bem para baixo */
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8b949e;
+  font-size: 15px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.footer-destaque {
+  color: #00d2ff;
+  font-weight: 600;
+  font-size: 15px;
+}

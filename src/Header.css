@@ -1,0 +1,38 @@
+/* Adicione a estilização do container topo */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #12161f;
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Adiciona espaçamento entre os links */
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px; /* Ajustado para um tamanho mais proporcional */
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-link {
+  color: #8B949E;
+}
+
+.nav-ativo {
+  color: #00D2FF;
+}
+
+nav a:hover {
+  color: #7928CA;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
