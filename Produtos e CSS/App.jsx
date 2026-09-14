@@ -7,45 +7,44 @@ import foto4 from './assets/MX3S.jpg';
 import foto5 from './assets/Dell27.jpg';
 import foto6 from './assets/X3D.jpg';
 
-// COMPONENTE DA TELA DE DETALHES
 function DetalhesProduto({ produto, aoVoltar }) {
   return (
-    <div className="container" style={{ maxWidth: '800px', padding: '40px 20px' }}>
-      <button 
-        className="btn-filter" 
-        onClick={aoVoltar} 
-        style={{ marginBottom: '24px', cursor: 'pointer' }}
-      >
+    <div className="container-details">
+      <button className="btn-filter btn-back" onClick={aoVoltar}>
         ← Voltar para a lista
       </button>
 
-      <div className="card" style={{ padding: '24px' }}>
-        <div className="card-image-box" style={{ height: '300px', marginBottom: '20px' }}>
+      <div className="card-details">
+        <div className="card-image-box details-image-box">
           {produto.foto ? (
-            <img src={produto.foto} alt={produto.nome} className="card-image" style={{ objectFit: 'contain', width: '100%', height: '100%' }} />
+            <img src={produto.foto} alt={produto.nome} className="card-image" />
           ) : (
             <span className="placeholder-text">[FOTO DO PRODUTO]</span>
           )}
         </div>
 
         <div className="card-category-badge">{produto.badge}</div>
-        <h1 className="title" style={{ fontSize: '2rem', margin: '10px 0' }}>{produto.nome}</h1>
-        <p className="card-price" style={{ fontSize: '1.8rem', color: '#00f2fe', marginBottom: '16px' }}>{produto.preco}</p>
-        <p className="card-description" style={{ fontSize: '1.1rem', marginBottom: '24px' }}>{produto.descricao}</p>
+        <h1 className="title details-title">{produto.nome}</h1>
+        <p className="card-price details-price">{produto.preco}</p>
+        <p className="card-description details-description">{produto.descricao}</p>
 
-        <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
-          <h3 style={{ color: '#fff', marginBottom: '12px' }}>Especificações Técnicas</h3>
-          <ul style={{ paddingLeft: '20px', color: '#a0a6b2' }}>
-            {produto.specs?.map((spec, index) => (
-              <li key={index} style={{ marginBottom: '6px' }}>{spec}</li>
-            ))}
-          </ul>
-        </div>
+        {produto.specs && (
+          <div className="details-info-box">
+            <h3>Especificações Técnicas</h3>
+            <ul>
+              {produto.specs.map((spec, index) => (
+                <li key={index}>{spec}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-        <div style={{ backgroundColor: 'rgba(0, 242, 254, 0.05)', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #00f2fe' }}>
-          <h3 style={{ color: '#00f2fe', marginBottom: '8px' }}>Foco em Saúde & Ergonomia</h3>
-          <p style={{ color: '#e2e8f0', margin: 0 }}>{produto.ergonomia}</p>
-        </div>
+        {produto.ergonomia && (
+          <div className="details-info-box highlight">
+            <h3>Foco em Saúde & Ergonomia</h3>
+            <p>{produto.ergonomia}</p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -123,8 +122,6 @@ function Produtos() {
 
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todos');
   const [termoBusca, setTermoBusca] = useState('');
-  
-  // ESTADO DO PRODUTO SELECIONADO
   const [produtoSelecionado, setProdutoSelecionado] = useState(null);
 
   const produtosFiltrados = todosProdutos.filter((produto) => {
@@ -138,7 +135,6 @@ function Produtos() {
     return bateuCategoria && bateuBusca;
   });
 
-  // TELA CONDICIONAL: SE TIVER UM PRODUTO SELECIONADO, MOSTRA OS DETALHES DELE
   if (produtoSelecionado !== null) {
     return (
       <DetalhesProduto 
@@ -148,7 +144,6 @@ function Produtos() {
     );
   }
 
-  // SENÃO, MOSTRA A TELA NORMAL COM O GRID
   return (
     <div className="container">
       <header className="header-box">
@@ -222,8 +217,6 @@ function Produtos() {
 
               <div className="card-footer">
                 <span className="card-price">{produto.preco}</span>
-                
-                {/* BOTÃO COM CLIQUE ATIVADO */}
                 <button 
                   className="btn-details"
                   onClick={() => setProdutoSelecionado(produto)}
@@ -244,9 +237,7 @@ function Produtos() {
 }
 
 function App() {
-  return (
-    <Produtos/>
-  );
+  return <Produtos />;
 }
 
 export default App;
