@@ -1,0 +1,197 @@
+/* Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #0b0e14;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header / Banner Principal */
+.header-box {
+  border: 1px solid #2a2f3a;
+  background-color: #12161f;
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+.subtitle {
+  color: #00bcd4;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #a0a6b2;
+  font-size: 13px;
+}
+
+/* Campo de Busca */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #0b0e14;
+  border: 1px solid #2a2f3a;
+  padding: 8px 15px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.search-icon {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #a0a6b2;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: #555c69;
+}
+
+/* Botões de Filtro */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-filter {
+  background-color: #1a202c;
+  border: none;
+  color: #718096;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.btn-filter.active {
+  background-color: #2d3748;
+  color: #ffffff;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 32%;
+  border: 1px solid #2a2f3a;
+  background-color: #12161f;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.card-image-box {
+  border: 1px solid #2a2f3a;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0e14;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.placeholder-text {
+  color: #718096;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.card-category-badge {
+  background-color: #1a202c;
+  color: #00bcd4;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 11px;
+  color: #a0a6b2;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  min-height: 30px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-price {
+  color: #a855f7;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn-details {
+  background-color: #00bcd4;
+  color: #000000;
+  border: none;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
