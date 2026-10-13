@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './Guia.css';
 
 function Guia() {
-  const [guiaSelecionado, setGuiaSelecionado] = useState(null);
+  // Guarda o ID do guia selecionado (ou null se nenhum estiver aberto)
+  const [guiaExpandido, setGuiaExpandido] = useState(null);
 
   const guias = [
     {
@@ -59,6 +60,15 @@ function Guia() {
     }
   ];
 
+  // Função para alternar (abrir/fechar) a visualização detalhada
+  const toggleGuia = (id) => {
+    if (guiaExpandido === id) {
+      setGuiaExpandido(null); // Fecha se clicar no mesmo botão
+    } else {
+      setGuiaExpandido(id); // Abre o clicado
+    }
+  };
+
   return (
     <>
       <div className="guia-container">
@@ -73,54 +83,40 @@ function Guia() {
 
         {/* Grid de Cards */}
         <section className="guia-grid">
-          {guias.map((item) => (
-            <div key={item.id} className="guia-card">
-              <div className="guia-badge">{item.tag}</div>
-              <h2 className="guia-card-title">{item.titulo}</h2>
-              <p className="guia-card-description">{item.descricao}</p>
-              <button
-                className="guia-btn-read"
-                onClick={() => setGuiaSelecionado(item)}
-              >
-                Ler Guia Completo
-              </button>
-            </div>
-          ))}
-        </section>
+          {guias.map((item) => {
+            const isExpanded = guiaExpandido === item.id;
 
-        {/* Modal do Guia Completo */}
-        {guiaSelecionado && (
-          <div className="modal-overlay" onClick={() => setGuiaSelecionado(null)}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <div className="modal-header">
-                <span className="guia-badge">{guiaSelecionado.tag}</span>
-                <h2>{guiaSelecionado.titulo}</h2>
-              </div>
-              
-              <div className="modal-body">
-                <p className="modal-description">{guiaSelecionado.descricao}</p>
-                <h3>Recomendações Práticas:</h3>
-                <ul>
-                  {guiaSelecionado.conteudoCompleto.map((ponto, index) => (
-                    <li key={index}>{ponto}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="modal-footer">
+            return (
+              <div key={item.id} className={`guia-card ${isExpanded ? 'guia-card-expanded' : ''}`}>
+                <div className="guia-badge">{item.tag}</div>
+                <h2 className="guia-card-title">{item.titulo}</h2>
+                <p className="guia-card-description">{item.descricao}</p>
+                
                 <button
                   className="guia-btn-read"
-                  onClick={() => setGuiaSelecionado(null)}
+                  onClick={() => toggleGuia(item.id)}
                 >
-                  Fechar
+                  {isExpanded ? 'Ocultar Detalhes' : 'Ler Guia Completo'}
                 </button>
+
+                {/* Conteúdo Detalhado Exibido Embaixo */}
+                {isExpanded && (
+                  <div className="guia-detalhes-inline">
+                    <h3>Recomendações Práticas:</h3>
+                    <ul>
+                      {item.conteudoCompleto.map((ponto, index) => (
+                        <li key={index}>{ponto}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-            </div>
-          </div>
-        )}
+            );
+          })}
+        </section>
       </div>
 
-      {/* Footer posicionado fora da div guia-container */}
+      {/* Footer */}
       <footer className="footer-container">
         <span>DevDock © 2026 — Projeto Integrador React</span>
         <span className="footer-destaque">
