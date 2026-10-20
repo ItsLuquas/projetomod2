@@ -1,0 +1,172 @@
+#106
+def numero(a,b,c):
+    return (a + b + c) / 3
+num1 = float(input(f"Digite um numero ai "))
+num2 = float(input(f"Digite um numero ai "))
+num3 = float(input(f"Digite um numero ai "))
+print(f"{numero(num1, num2, num3):.2f}")
+'''
+
+'''
+#107
+def vitor(a,b):
+    return a * b
+altura = float(input("Digite a altura do seu retangulo "))
+base = float(input("Digite a Base do seu retangulo "))
+resultado = base * altura
+print(f"deu: {resultado} ")
+'''
+
+'''
+#108
+def nsei(celsius):
+    fahrenheit = (celsius * 1.8) + 32
+    return fahrenheit
+resultado = nsei(30)
+
+print(f"30°C correspondem a {resultado}°F")
+'''
+
+'''
+#109
+def calcularofatoriazin(n):
+    fatorial = 1
+
+    for i in range(1, n + 1):
+        fatorial *= i
+
+        return fatorial
+resultado = calcularofatoriazin(5)
+
+print(f"o fatorial é: {resultado}")
+'''
+
+'''
+#110
+def primo(A):
+    if A <= 1:
+        return False
+
+    for i in range(2):
+        if A % i == 0:
+            return False
+
+        return True
+     
+resultado = primo(7)
+print(f"O número é primo? {resultado}")
+'''
+
+'''
+#111
+def vogal(n):
+    vogais = "aeiouAEIOU"
+    total = 0
+
+    for letra in n:
+        if letra in vogais:
+            total += 1
+        return total
+resultado = vogal("Python")
+print(f"Quantidade de vogais: {resultado}")
+'''
+
+'''
+#112
+def maior_valor(lista):
+    maior = lista[0]
+
+    for num in lista:
+        if num > maior:
+            maior = num
+    return maior
+
+numeros = [10,11,9,80,67,81,15]
+resultado = maior_valor(numeros)
+
+print
+''' 
+
+'''
+#113
+def calcular_media(lista):
+    if not lista: 
+        return 0
+    
+    soma = sum(lista)
+    quantidade = len(lista)
+    
+    return soma / quantidade
+
+
+notas = [10, 8, 6, 4]
+resultado = calcular_media(notas)
+print(f"A média é: {resultado}")
+
+vazia = []
+resultado_vazia = calcular_media(vazia)
+print(f"Média de lista vazia: {resultado_vazia}")    
+'''
+
+'''
+#114
+def filtrar_positivos(lista):
+    positivos = []
+    
+    for num in lista:
+        if num > 0:
+            positivos.append(num)  
+            
+    return positivos
+
+numeros = [-10, 15, -3, 0, 8, -1, 42]
+resultado = filtrar_positivos(numeros)
+
+print(f"Lista de positivos: {resultado}")
+'''
+
+'''
+#115
+def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "Erro: Divisão por zero!"
+    return a / b
+
+
+print("--- CALCULADORA ---")
+print("1 - Somar")
+print("2 - Subtrair")
+print("3 - Multiplicar")
+print("4 - Dividir")
+
+opcao = input("Escolha uma opção (1-4): ")
+
+
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+
+
+if opcao == "1":
+    resultado = somar(n1, n2)
+    print(f"Resultado: {n1} + {n2} = {resultado}")
+elif opcao == "2":
+    resultado = subtrair(n1, n2)
+    print(f"Resultado: {n1} - {n2} = {resultado}")
+elif opcao == "3":
+    resultado = multiplicar(n1, n2)
+    print(f"Resultado: {n1} * {n2} = {resultado}")
+elif opcao == "4":
+    resultado = dividir(n1, n2)
+    print(f"Resultado: {resultado}")
+else:
+    print("Opção inválida!")
+'''
